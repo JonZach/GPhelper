@@ -1,0 +1,9 @@
+<h3>My Appointments</h3>
+
+<% @appointments.each do |appointment| %>
+    <h4><%= appointment.date %></h4>
+    <p><%= appointment.street %><br/>
+    <%= appointment.city %><br/>
+    <%= appointment.zip %></p>
+<% end %>
+
