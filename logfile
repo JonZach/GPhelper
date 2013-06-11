@@ -1,0 +1,7 @@
+LOG:  database system was shut down at 2013-05-31 09:44:50 CDT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "GPhelper_development" does not exist
+FATAL:  database "GPhelper_development" does not exist
+FATAL:  database "GPhelper_test" does not exist
+FATAL:  database "GPhelper_production" does not exist
