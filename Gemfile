@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'devise'
+gem 'jquery-rails'
 
 
 # Gems used only for assets and not required
@@ -21,7 +22,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :test do
+    gem 'cucumber-rails'
+    gem 'rspec-rails'
+    gem 'database_cleaner'
+end
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
