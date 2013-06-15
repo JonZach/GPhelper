@@ -1,12 +1,12 @@
-<h3>Add a new Appointment</h3>
+<h3>New Appointment</h3>
 <%= form_for @appointment do |f| %>
-  <%= f.label :date, "Enter Date (yyyy/mm/dd)" %>
+  <%= f.label :date, "Enter Date (yyyy/mm/dd)" %><br/>
   <%= f.text_field :date %><br/>
-  <%= f.label :street, "Enter Street Number" %>
+  <%= f.label :street, "Street Number" %><br/>
   <%= f.text_field :street %><br/>
-  <%= f.label :city, "Enter City" %>
+  <%= f.label :city, "City" %><br/>
   <%= f.text_field :city %><br/>
-  <%= f.label :zip, "Enter 5 Digit Zip Code" %>
+  <%= f.label :zip, "5 Digit Zip Code" %><br/>
   <%= f.text_field :zip %><br/>
   <%= f.submit "Add Appointment" %>
 <% end %>

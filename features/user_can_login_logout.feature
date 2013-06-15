@@ -1,3 +1,4 @@
+@wip
 Feature: User can log in and log out
     In order to save my appointments
     As a user

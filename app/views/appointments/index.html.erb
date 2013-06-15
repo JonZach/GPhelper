@@ -4,6 +4,7 @@
     <p><strong><%= appointment.date %></strong><br/>
     <%= appointment.street %><br/>
     <%= appointment.city %><br/>
-    <%= appointment.zip %></p>
+    <%= appointment.zip %><br/>
+    <button><%= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?" %></button></p>
 <% end %>
 

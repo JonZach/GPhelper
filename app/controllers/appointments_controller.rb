@@ -12,4 +12,10 @@ class AppointmentsController < ApplicationController
         @appointment = Appointment.new
     end
 
+    def destroy
+        @appointment = Appointment.find( params[:id] )
+        @appointment.destroy
+        redirect_to :root
+    end
+
 end

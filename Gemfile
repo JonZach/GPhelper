@@ -24,8 +24,10 @@ end
 
 group :test do
     gem 'cucumber-rails'
-    gem 'rspec-rails'
+    gem 'capybara'
     gem 'database_cleaner'
+    gem 'launchy'
+    gem 'rspec-rails'
 end
 
 
