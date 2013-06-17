@@ -17,3 +17,7 @@ FATAL:  database "GPhelper_test" does not exist
 FATAL:  database "postrgres" does not exist
 FATAL:  database "GPhelper_test" does not exist
 FATAL:  database "GPhelper_test" does not exist
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down

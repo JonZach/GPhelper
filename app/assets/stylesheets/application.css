@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+.appointment_list{
+    width: 200px;
+    background-color: gray;
+}
