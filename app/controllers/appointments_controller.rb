@@ -1,6 +1,7 @@
 class AppointmentsController < ApplicationController
     def index
-        @appointments = Appointment.all
+        @appointments = Appointment.all.sort_by &:date
+        #sorted = @appointments.sort_by &:date
     end
 
     def create
