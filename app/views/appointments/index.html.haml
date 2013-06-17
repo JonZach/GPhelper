@@ -1,0 +1,13 @@
+%h3 My Appointments
+- @appointments.each do |appointment|
+  .appointment_list
+    %p
+      %strong= appointment.date
+      %br/
+      = appointment.street
+      %br/
+      = appointment.city
+      %br/
+      = appointment.zip
+      %br/
+      %button= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
