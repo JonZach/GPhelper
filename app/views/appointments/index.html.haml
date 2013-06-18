@@ -1,4 +1,5 @@
 %h3 My Appointments
+%button= link_to "Add Appointment", new_appointment_path
 - @appointments.each do |appointment|
   .appointment_list
     %p
@@ -12,3 +13,4 @@
       %br/
       %button.delete= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
       %button= link_to "Complete", appointment
+
