@@ -39,7 +39,7 @@ Then(/^I should be able to log back in as "(.*?)" with password "(.*?)"$/) do |e
   fill_in "Email", with: email
   fill_in "Password", with: password
   click_link_or_button "Sign in"
-  page.should have_content("Hello,")
+  page.should have_content("Signed,")
 end
 
 # Given(/^the league "(.*?)" has been created$/) do |name|

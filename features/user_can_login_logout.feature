@@ -11,7 +11,7 @@ Feature: Users can log in and log out
     And I fill in "bob@example.com" for "Email"
     And I fill in "password1" for "Password"
     And I press "Sign in"
-    Then I should see "Hello, test user."
+    Then I should see "Signed in successfully."
     And I should not see "Sign In"
 
   Scenario: Wrong Password
