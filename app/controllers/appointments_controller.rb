@@ -7,12 +7,12 @@ class AppointmentsController < ApplicationController
     def create
         @appointments = current_user.appointments.all
         @appointment = current_user.appointments.build( params[:appointment] )
-        redirect_to :root
+        # redirect_to :root
         if @appointment.save
           flash[:notice] = "#{@appointment.street} has been added to your schedule for #{@appointment.date}."
           redirect_to appointments_path
         else
-          render :index
+          redirect_to :index
         end
     end
 
@@ -21,7 +21,7 @@ class AppointmentsController < ApplicationController
     end
 
     def destroy
-        @appointment = current_user.appointment.find( params[:id] )
+        @appointment = Appointment.find( params[:id] )
         @appointment.destroy
         redirect_to :root
     end
