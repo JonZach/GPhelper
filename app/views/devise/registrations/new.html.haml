@@ -13,5 +13,19 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation
+  %p
+    Enter your Business Location
+  %div
+    = f.label :street
+    %br/
+    = f.text_field :street
+  %div
+    = f.label :city
+    %br/
+    = f.text_field :city
+  %div
+    = f.label :zip
+    %br/
+    = f.text_field :zip
   %div= f.submit "Sign up"
 = render "devise/shared/links"
