@@ -10,4 +10,5 @@
       %br/
       = appointment.zip
       %br/
-      %button= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
+      %button.delete= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
+      %button= link_to "Complete", appointment

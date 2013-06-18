@@ -13,8 +13,9 @@
  */
 .appointment_list{
     width: 200px;
-    background-color: gray;
+    background-color: #f4e9dd;
 }
 
-.appointment_list button{
+.appointment_list button.delete{
+    margin-left: 25px;
 }
