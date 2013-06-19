@@ -3,4 +3,10 @@ class Appointment < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user_id, :date, :city, :street
+
+  geocoded_by :address
+
+  def address
+    [street, city, zip].compact.join(', ')
+  end
 end
