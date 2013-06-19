@@ -5,8 +5,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :street, :city, :zip
-  # attr_accessible :title, :body
+  #validates_presence_of :street, :city, :zip
+
   has_many :appointments
+
+  geocoded_by :business_address
+  after_validation :geocode
+
+  def business_address
+    [street, city, zip].compact.join(', ')
+  end
 end

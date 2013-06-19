@@ -5,6 +5,7 @@ class Appointment < ActiveRecord::Base
   validates_presence_of :user_id, :date, :city, :street
 
   geocoded_by :address
+  after_validation :geocode
 
   def address
     [street, city, zip].compact.join(', ')

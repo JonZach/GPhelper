@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619181525) do
+ActiveRecord::Schema.define(:version => 20130619191139) do
 
   create_table "appointments", :force => true do |t|
     t.date     "date"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20130619181525) do
     t.string   "street"
     t.string   "city"
     t.string   "zip"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
