@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'bootstrap-sass'
+gem 'geocoder'
 gem 'haml-rails'
 gem 'devise'
 gem 'jquery-rails'
