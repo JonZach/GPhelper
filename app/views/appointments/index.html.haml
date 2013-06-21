@@ -1,16 +1,28 @@
 %h3 My Appointments
 %button= link_to "Add Appointment", new_appointment_path
-- @appointments.each do |appointment|
-  .appointment_list
-    %p
-      %strong= appointment.date
-      %br/
-      = appointment.street
-      %br/
-      = appointment.city
-      %br/
-      = appointment.zip
-      %br/
-      %button.delete= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
-      %button= link_to "Complete", appointment
+%div.container#appt_table
+  %table.table.table-bordered#appointment_list
+    %tr
+      %th Date (yyyy/mm/dd)
+      %th Street
+      %th City
+      %th Zip Code
+      - @appointments.each do |appointment|
+        / .appointment_list
+        %tr.success
+          %td= appointment.date
+          %td= appointment.street
+          %td= appointment.city
+          %td= appointment.zip
+    / %p
+    /   %strong= appointment.date
+    /   %br/
+    /   = appointment.street
+    /   %br/
+    /   = appointment.city
+    /   %br/
+    /   = appointment.zip
+    /   %br/
+    /  %button.delete= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
+    /  %button= link_to "Complete", appointment
 
