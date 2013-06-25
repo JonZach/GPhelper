@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   geocoded_by :business_address
   after_validation :geocode
 
+  acts_as_gmappable :process_geocoding => false
+
   def business_address
     [street, city, zip].compact.join(', ')
   end

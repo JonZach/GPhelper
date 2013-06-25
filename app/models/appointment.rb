@@ -7,7 +7,13 @@ class Appointment < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
 
+  acts_as_gmappable :process_geocoding => false
+
   def address
     [street, city, zip].compact.join(', ')
+  end
+
+  def gmaps4rails_address
+  "#{latitude}, #{longitude}"
   end
 end

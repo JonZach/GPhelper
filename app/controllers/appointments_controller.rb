@@ -2,6 +2,7 @@ class AppointmentsController < ApplicationController
     def index
         @appointments = current_user.appointments.all.sort_by &:date
         #sorted = @appointments.sort_by &:date
+        @json = @appointments.to_gmaps4rails
     end
 
     def create
