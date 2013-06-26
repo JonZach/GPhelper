@@ -4,9 +4,30 @@ body{
  }
 @import "bootstrap-responsive";
 
-#header{
+.navbar#header{
     background-color: #0F3755;
     margin-top: 0px;
+}
+
+.pull-right{
+    padding-right: 50px;
+}
+
+ul li a{
+    height: 48px;
+    padding-bottom: 0px;
+}
+
+ul.nav.pull-right li.divider-vertical{
+    height: 47px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul.nav.pull-right li a{
+    text-shadow: none;
+    padding-top: 20px;
+    padding-bottom: 0px;
 }
 
 .container{
