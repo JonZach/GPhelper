@@ -6,6 +6,7 @@ class AppointmentsController < ApplicationController
           marker.infowindow render_to_string(:partial => "/appointments/infowindow", :locals => { :appointment => appointment})
               marker.title "#{appointment.street} #{appointment.city}"
         end
+        best_route
     end
 
     def create
@@ -22,6 +23,14 @@ class AppointmentsController < ApplicationController
 
     def new
         @appointment = Appointment.new
+    end
+
+    def best_route
+        @route_appointments = current_user.appointments.all do |appointment|
+          if appointment.geocoded?
+            appointment.distance_from(current_user.business_address)
+          end
+        end
     end
 
     def destroy

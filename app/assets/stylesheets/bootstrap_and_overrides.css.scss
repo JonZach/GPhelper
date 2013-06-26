@@ -1,9 +1,12 @@
 @import "bootstrap";
-body { padding-top: 40px; }
+body{
+    //background-color: #f4f2de;
+ }
 @import "bootstrap-responsive";
 
 #header{
     background-color: #0F3755;
+    margin-top: 0px;
 }
 
 .container{

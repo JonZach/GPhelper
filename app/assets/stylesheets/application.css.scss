@@ -19,8 +19,26 @@
 // .appointment_list button.delete{
 //     margin-left: 25px;
 // }
+p.alert, p.notice{
+  background-color: #fefefe;
+  border: none;
+}
+
 #appt_table{
   background-image: none;
+}
+
+th{
+  color: #f4f2de;
+  background-color: #0F3755;
+}
+
+.container#routed{
+  display: inline-block;
+  margin-left: 10px;
+  width: 400px;
+  background-image: none;
+  //color: #f4f2de;
 }
 
 .content {

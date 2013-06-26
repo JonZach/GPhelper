@@ -14,8 +14,16 @@
           %td= appointment.street
           %td= appointment.city
           %td= appointment.zip
-  %p
-    = gmaps4rails(@json)
+= gmaps4rails(@json)
+%div.container#routed
+  %table.table.table-bordered
+    %tr
+      %th Street
+      %th Distance
+      - @route_appointments.each do |appointment|
+        %tr
+          %td= appointment.street
+          %td= appointment.distance_from(current_user.business_address)
     / %p
     /   %strong= appointment.date
     /   %br/
