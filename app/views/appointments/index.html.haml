@@ -18,12 +18,15 @@
           %td= appointment.zip
           %td.button= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
           %td.button= link_to "Complete", appointment
-= gmaps4rails(@json)
+%div.container#gmap_view
+  %h3#gmap_header Map View of Today's Appointments
+  = gmaps4rails(@json)
 %div.container#routed
+  %h3 Today's Best Route
   %table.table.table-bordered
     %tr
       %th Street
-      %th Distance
+      %th Distance (in miles)
       - @route_appointments.each do |appointment|
         %tr
           %td= appointment.street

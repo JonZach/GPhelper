@@ -28,9 +28,20 @@ p.alert, p.notice{
   background-image: none;
 }
 
+h3#gmap_header{
+  margin-left: 25px;
+}
+
 th{
   color: #f4f2de;
   background-color: #0F3755;
+}
+
+.container#gmap_view{
+  width: 600px;
+  background-image: none;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 .container#routed{
