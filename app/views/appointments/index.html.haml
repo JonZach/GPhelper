@@ -7,6 +7,8 @@
       %th Street
       %th City
       %th Zip Code
+      %th Remove
+      %th Complete
       - @appointments.each do |appointment|
         / .appointment_list
         %tr.success
@@ -14,6 +16,8 @@
           %td= appointment.street
           %td= appointment.city
           %td= appointment.zip
+          %td.button= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
+          %td.button= link_to "Complete", appointment
 = gmaps4rails(@json)
 %div.container#routed
   %table.table.table-bordered
