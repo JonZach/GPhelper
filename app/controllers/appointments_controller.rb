@@ -25,11 +25,18 @@ class AppointmentsController < ApplicationController
     end
 
     def best_route
-        @route_appointments = current_user.appointments.all do |appointment|
-          if appointment.geocoded?
-            appointment.distance_from(current_user.business_address).round(2)
-          end
-        end
+        @route_appointments = current_user.appointments.all.sort_by { |appointment| appointment.distance_from(current_user.business_address) }
+        # @route_appointments = current_user.appointments.all do |appointment|
+          # @next_stop << {
+          #   :id => appointment.id,
+          #   :street => appointment.street,
+          #   :distance_away => appointment.distance_from(current_user.business_address).round(2)
+          # }
+          # if appointment.geocoded?
+          #   appointment.distance_from(current_user.business_address).round(2)
+          # end
+        # end
+        # @route_appointments.sort_by { |appointment| appointment.distance_from(current_user.business_address) }
     end
 
     def destroy
