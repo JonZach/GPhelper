@@ -26,8 +26,13 @@ ul.nav.pull-right li.divider-vertical{
 
 ul.nav.pull-right li a{
     text-shadow: none;
+    color: #f4f2de;
     padding-top: 20px;
     padding-bottom: 0px;
+}
+
+ul.nav.pull-right li a:hover{
+    color: #99c43f;
 }
 
 .container{
