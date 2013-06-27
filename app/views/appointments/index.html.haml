@@ -35,15 +35,3 @@
         %tr
           %td= appointment.street
           %td= appointment.distance_from(current_user.business_address).round(2)
-    / %p
-    /   %strong= appointment.date
-    /   %br/
-    /   = appointment.street
-    /   %br/
-    /   = appointment.city
-    /   %br/
-    /   = appointment.zip
-    /   %br/
-    /  %button.delete= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
-    /  %button= link_to "Complete", appointment
-

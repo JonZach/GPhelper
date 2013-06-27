@@ -25,7 +25,7 @@ class AppointmentsController < ApplicationController
     end
 
     def best_route
-        @route_appointments = current_user.appointments.all.sort_by { |appointment| appointment.distance_from(current_user.business_address) }
+          @route_appointments = current_user.appointments.all.sort_by { |appointment| appointment.distance_from(current_user.business_address) }
         # @route_appointments = current_user.appointments.all do |appointment|
           # @next_stop << {
           #   :id => appointment.id,
