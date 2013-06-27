@@ -10,5 +10,5 @@
     %div.hero-unit#home
       %h3 Get Started Today
       %p Sign Up for FREE
-      %button.btn-primary= link_to "Sign Up", new_user_registration_path, :method => "get"
+      %button.btn-primary= button_to "Register", new_user_registration_path, :method => "get"
       %button= button_to "Sign In", new_user_session_path, :method => "get"

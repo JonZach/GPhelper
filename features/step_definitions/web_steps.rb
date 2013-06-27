@@ -42,11 +42,6 @@ Then(/^I should be able to log back in as "(.*?)" with password "(.*?)"$/) do |e
   page.should have_content("Signed,")
 end
 
-# Given(/^the league "(.*?)" has been created$/) do |name|
-#   FootballLeague.create(name: name)
-#   UserFootballLeague.create(user_id: User.last.id, football_league_id: FootballLeague.last.id)
-# end
-
 When(/^I log in as "(.*?)" with password "(.*?)"$/) do |email, password|
   click_link_or_button "Sign In"
   fill_in "Email", with: email

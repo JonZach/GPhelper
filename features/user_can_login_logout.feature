@@ -1,4 +1,4 @@
-#@wip
+@wip
 Feature: Users can log in and log out
   In order to save my leagues
   As a user
