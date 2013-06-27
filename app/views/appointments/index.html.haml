@@ -1,5 +1,9 @@
 %div#appt_head
-  %h3 My Appointments
+  - if @appointments.empty?
+    %h3 You Have No Scheduled Appointments.
+    %p click below to add
+  - else
+    %h3 My Appointments
   %button= link_to "Add Appointment", new_appointment_path
 %div.container#appt_table
   %table.table.table-bordered#appointment_list

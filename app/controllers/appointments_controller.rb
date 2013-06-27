@@ -1,7 +1,6 @@
 class AppointmentsController < ApplicationController
     def index
         @appointments = current_user.appointments.all.sort_by &:date
-        #sorted = @appointments.sort_by &:date
         @json = @appointments.to_gmaps4rails do |appointment, marker|
           marker.infowindow render_to_string(:partial => "/appointments/infowindow", :locals => { :appointment => appointment})
               marker.title "#{appointment.street} #{appointment.city}"
