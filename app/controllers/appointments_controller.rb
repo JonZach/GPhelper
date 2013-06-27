@@ -28,7 +28,7 @@ class AppointmentsController < ApplicationController
     def best_route
         @route_appointments = current_user.appointments.all do |appointment|
           if appointment.geocoded?
-            appointment.distance_from(current_user.business_address)
+            appointment.distance_from(current_user.business_address).round(2)
           end
         end
     end

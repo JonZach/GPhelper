@@ -1,5 +1,6 @@
-%h3 My Appointments
-%button= link_to "Add Appointment", new_appointment_path
+%div#appt_head
+  %h3 My Appointments
+  %button= link_to "Add Appointment", new_appointment_path
 %div.container#appt_table
   %table.table.table-bordered#appointment_list
     %tr
@@ -10,14 +11,13 @@
       %th Remove
       %th Complete
       - @appointments.each do |appointment|
-        / .appointment_list
         %tr.success
           %td= appointment.date
           %td= appointment.street
           %td= appointment.city
           %td= appointment.zip
           %td.button= link_to "Delete", appointment, :method => :delete, :confirm => "You are about to delete this appointment. Are you sure?"
-          %td.button= link_to "Complete", appointment
+          %td.button= link_to "Complete", appointment, :method => :delete, :confirm => "Did you complete this job? Selecting 'ok' will remove it from your schedule."
 %div.container#gmap_view
   %h3#gmap_header Map View of Today's Appointments
   = gmaps4rails(@json)
@@ -30,7 +30,7 @@
       - @route_appointments.each do |appointment|
         %tr
           %td= appointment.street
-          %td= appointment.distance_from(current_user.business_address)
+          %td= appointment.distance_from(current_user.business_address).round(2)
     / %p
     /   %strong= appointment.date
     /   %br/

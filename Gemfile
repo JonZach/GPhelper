@@ -12,6 +12,7 @@ gem 'gmaps4rails'
 gem 'haml-rails'
 gem 'devise'
 gem 'jquery-rails'
+gem 'jquery_datepicker'
 
 
 # Gems used only for assets and not required
