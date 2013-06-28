@@ -1,12 +1,12 @@
 @import "bootstrap";
 body{
-    //background-color: #f4f2de;
  }
 @import "bootstrap-responsive";
 
 .navbar#header{
     background-color: #0F3755;
     margin-top: 0px;
+    margin-bottom: 9px;
 }
 
 .pull-right{
@@ -35,10 +35,24 @@ ul.nav.pull-right li a:hover{
     color: #99c43f;
 }
 
-.container{
+.container#known_user{
     padding: 10px;
     text-align: center;
+    width: 715px;
+    height: 410px;
+    background-image: url(/assets/street_lawn.jpg);
+}
+
+.container#new_user{
+    padding: 10px;
+    text-align: center;
+    width: 915px;
+    height: 740px;
     background-image: url(/assets/lawn.jpg);
+}
+
+button.btn-primary{
+    margin-top: 5px;
 }
 
 .container#login{
@@ -50,20 +64,31 @@ ul.nav.pull-right li a:hover{
     background-image: url(/assets/neighborhood.jpg);
 }
 
+.container#new_appt{
+    background-image: url(/assets/landscape.jpg);
+    width: 990px;
+    height: 550px;
+}
+
 .hero-unit{
     padding: 10px;
     text-align: center;
     background-color: #f4f2de;
-    width: 300px;
+    width: 320px;
     margin: auto;
     opacity: 0.75;
+    margin-top: 30px;
     // background-image: url(/assets/lawn.jpg);
 }
 
 .container#home{
-    height: 550px;
+    width: 870px;
+    height: 300px;
+    margin: auto;
+    background-image: url(/assets/home_lawn.jpg);
 }
 
 .jumbotron{
     text-align: center;
+    margin-top: 0px;
 }

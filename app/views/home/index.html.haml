@@ -1,14 +1,17 @@
 %body
 - if user_signed_in?
-  %div.container
+  %div.container#known_user
     %div.hero-unit
-      %button= link_to "New Appointment", new_appointment_path
-      %button= link_to "View Appointments", appointments_path
-      %button= link_to "Sign Out", destroy_user_session_path, method: :delete
+      %h3 Manage Your Day
+      %button.btn-primary= button_to "New Appointment", new_appointment_path, :method => "get"
+      %button.btn-primary= button_to "View Appointments", appointments_path, :method => "get"
+      %button.btn-primary= button_to "Sign Out", destroy_user_session_path, method: :delete
 - else
+  %div.jumbotron
+    %h3 +Add +Complete +Cancel Appointments. We'll tell you the Best Route
   %div.container#home
     %div.hero-unit#home
-      %h3 Get Started Today
-      %p Sign Up for FREE
+      %h3 Let Us Help!
+      %p Get Started Today
       %button.btn-primary= button_to "Register", new_user_registration_path, :method => "get"
-      %button= button_to "Sign In", new_user_session_path, :method => "get"
+      %button.btn-primary= button_to "Sign In", new_user_session_path, :method => "get"

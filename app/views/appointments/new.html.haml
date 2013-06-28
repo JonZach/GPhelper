@@ -1,13 +1,14 @@
-%div.hero-unit
-  %h3 New Appointment
-  = form_for @appointment do |f|
-    = f.label :date, "Enter Date (yyyy/mm/dd)"
-    = f.text_field :date
-    = f.label :street, "Street Number"
-    = f.text_field :street
-    = f.label :city, "City"
-    = f.text_field :city
-    = f.label :zip, "5 Digit Zip Code"
-    = f.text_field :zip
-    %br/
-    = f.submit "Add Appointment"
+%div.container#new_appt
+  %div.hero-unit
+    %h3 New Appointment
+    = form_for @appointment do |f|
+      = f.label :date, "Enter Date (yyyy/mm/dd)"
+      = f.text_field :date
+      = f.label :street, "Street Number"
+      = f.text_field :street
+      = f.label :city, "City"
+      = f.text_field :city
+      = f.label :zip, "5 Digit Zip Code"
+      = f.text_field :zip
+      %br/
+      = f.submit "Add Appointment"
