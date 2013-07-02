@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'jquery-rails'
 gem 'jquery_datepicker'
+gem 'newrelic_rpm'
 
 
 # Gems used only for assets and not required
